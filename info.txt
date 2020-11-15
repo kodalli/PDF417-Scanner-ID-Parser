@@ -1,16 +1,10 @@
 npm init -y
 npm i express --save
 npm i dotenv --save
-node app.js
-npm i nodemon
+npm i nodemon --save
+npm i ejs --save 
 
 in package.json, in "scripts" -> "dev": "nodemon app.js"
 npm run dev 
 
-npm i ejs --save 
-
-<!-- <ul>
-        <% for(let i = 0; i < parsedData.length; i++) { %>
-        <li><%= parsedData[i] %></li>
-        <% } %>
-    </ul> -->
+node app.js
