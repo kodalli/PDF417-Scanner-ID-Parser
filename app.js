@@ -1,5 +1,5 @@
-import { parseIdData } from './parse_text.js';
-
+// import { parseIdData } from './static/parse_text.js';
+const parseText = require('./static/parse_text.js')
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
@@ -11,13 +11,15 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs');
 app.use(express.static('static'));
 
+var parsedData;
 app.get('/', (req, res) => {
-    res.render('./main.ejs');
+    res.render('./main.ejs', 
+    {parsedData : parsedData});
 });
 
 app.post('/', (req, res) => {
-    //console.log(req.body);
-    console.log(parseIdData(req.body.value));
+    let textData = req.body['licenseData'];
+    parsedData = parseText.parseIdData(textData);
     res.redirect('/');
 });
 

@@ -8,3 +8,9 @@ in package.json, in "scripts" -> "dev": "nodemon app.js"
 npm run dev 
 
 npm i ejs --save 
+
+<!-- <ul>
+        <% for(let i = 0; i < parsedData.length; i++) { %>
+        <li><%= parsedData[i] %></li>
+        <% } %>
+    </ul> -->

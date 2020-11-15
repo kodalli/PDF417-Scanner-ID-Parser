@@ -10,7 +10,7 @@ function parseFile(textFile, aamvaData) {
     if (textFile.match(/\.[0-9a-z]{1,5}$/i) == '.txt') {
         text = fs.readFileSync(textFile, 'utf-8').replace(/\r\n/g, "\r").split(/\r/);
     } else {
-        text = textFile;
+        text = textFile.replace(/\r\n/g, "\r").split(/\r/);
     }
 
     let idData; // holds all AAMVA id field information
@@ -25,16 +25,18 @@ function parseFile(textFile, aamvaData) {
         _id = text[line].substring(0, 3); // Know that id is first 3 characters
         for (let version in idData) {
             if (_id in idData[version]) {
-                console.log(idData[version][_id] + ': ' + text[line].substr(3, text[line].length));
+                // console.log(idData[version][_id] + ': ' + text[line].substr(3, text[line].length));
                 userData[idData[version][_id]] = text[line].substr(3, text[line].length).trim();
                 break;
             }
         }
     }
-    return JSON.stringify(userData, null, 5);
+    //return JSON.stringify(userData, null, 5);
+    return userData;
 };
 
 function saveUserData(jsonContent, destinationJson) {
+    jsonContent = JSON.stringify(jsonContent, null, 5);
     fs.writeFileSync(destinationJson, jsonContent, (error) => {
         // In case of a error throw err exception. 
         if (error) throw err;
@@ -42,9 +44,7 @@ function saveUserData(jsonContent, destinationJson) {
 };
 
 function parseIdData(text) {
-    parsedFile = parseFile(text, 'static\\AAMVA_Element_IDs.json');
-    console.log("function called");
-    return parsedFile;
+    return parseFile(text, 'static\\AAMVA_Element_IDs.json');
 }
 
 exports.parseIdData = parseIdData;
