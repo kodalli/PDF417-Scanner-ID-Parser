@@ -1,14 +1,3 @@
-/*  Author: Surya Kodali
-Date Created: 10-30-2020
-Last Modified: 11-01-2020
-Description:
-This program parses a text file provided by PDF-417 barcodes,
-compares it AAMVA version standards, and returns formatted json
-with parsed data matched to their specific fields.
-
-Currently there is no error handling so USE WITH CAUTION.
-*/
-
 const {
     versions
 } = require('process');
