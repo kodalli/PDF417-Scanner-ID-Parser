@@ -25,7 +25,7 @@ function parseFile(textFile, aamvaData) {
         _id = text[line].substring(0, 3); // Know that id is first 3 characters
         for (let version in idData) {
             if (_id in idData[version]) {
-                // console.log(idData[version][_id] + ': ' + text[line].substr(3, text[line].length));
+                //console.log(idData[version][_id] + ': ' + text[line].substr(3, text[line].length));
                 userData[idData[version][_id]] = text[line].substr(3, text[line].length).trim();
                 break;
             }
@@ -45,9 +45,8 @@ function saveUserData(jsonContent, destinationJson) {
 
 function parseIdData(text) {
     return parseFile(text, 'static\\AAMVA_Element_IDs.json');
-}
+};
 
 exports.parseIdData = parseIdData;
-// global.parseFile = parseFile('static\\license_example_RI.txt', 'static\\AAMVA_Element_IDs.json');
-// console.log(global.parseFile)
-//saveUserData(global.parseFile, 'user_id_data.json')
+// parseFile('static\\license_example_RI.txt', 'static\\AAMVA_Element_IDs.json');
+// saveUserData(global.parseFile, 'user_id_data.json')

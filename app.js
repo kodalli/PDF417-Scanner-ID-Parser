@@ -1,4 +1,3 @@
-// import { parseIdData } from './static/parse_text.js';
 const parseText = require('./static/parse_text.js')
 const express = require('express');
 const bodyParser = require('body-parser');

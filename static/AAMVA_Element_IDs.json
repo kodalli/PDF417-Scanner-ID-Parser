@@ -19,7 +19,8 @@
     "DBO": "Last Name Alias",
     "DBP": "First Name Alias",
     "DBR": "Suffix Alias",
-    "DBN": "Name Suffix"
+    "DBN": "Name Suffix",
+    "DAA": "Full Name"
   },
   "Version 2": {
     "DCT": "First Name",
@@ -195,36 +196,6 @@
     "DCU": "Name Suffix"
   },
   "Version 8": {
-    "DAC": "First Name",
-    "DCS": "Last Name",
-    "DAD": "Middle Name",
-    "DBA": "Expiration Date",
-    "DBD": "Issue Date",
-    "DBB": "Date of Birth",
-    "DBC": "Gender",
-    "DAY": "Eye Color",
-    "DAU": "Height (inches)",
-    "DAG": "Street Address",
-    "DAI": "City",
-    "DAJ": "State",
-    "DAK": "Postal Code",
-    "DAQ": "Customer ID",
-    "DCF": "Document ID",
-    "DCG": "Issuing Country",
-    "DDG": "Middle Name Truncation",
-    "DDF": "First Name Truncation",
-    "DDE": "Last Name Truncation",
-    "DAH": "Second Street Address",
-    "DAZ": "Hair Color",
-    "DCI": "Place of Birth",
-    "DCJ": "Audit Information",
-    "DCK": "Inventory Control",
-    "DBN": "Last Name Alias",
-    "DBG": "First Name Alias",
-    "DBS": "Suffix Alias",
-    "DCU": "Name Suffix"
-  },
-  "Version 10": {
     "DAC": "First Name",
     "DCS": "Last Name",
     "DAD": "Middle Name",
