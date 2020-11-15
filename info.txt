@@ -1,0 +1,10 @@
+npm init -y
+npm i express --save
+npm i dotenv --save
+node app.js
+npm i nodemon
+
+in package.json, in "scripts" -> "dev": "nodemon app.js"
+npm run dev 
+
+npm i ejs --save 
